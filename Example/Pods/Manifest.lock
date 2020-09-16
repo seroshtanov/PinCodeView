@@ -1,0 +1,16 @@
+PODS:
+  - PinCodeView (0.1.0)
+
+DEPENDENCIES:
+  - PinCodeView (from `../`)
+
+EXTERNAL SOURCES:
+  PinCodeView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PinCodeView: 4f74dba6fcda8cab50b3ebfa311735cb75c95f5f
+
+PODFILE CHECKSUM: 9496ee584b95b811fae87a3e823aceb80fb6fc91
+
+COCOAPODS: 1.9.3
