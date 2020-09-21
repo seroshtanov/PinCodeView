@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PinCodeViewDelegate : AnyObject {
+public protocol PinCodeViewDelegate : AnyObject {
     func didEndEnterCode(code: String)
 }
 
@@ -21,20 +21,20 @@ protocol PinCodeViewDelegate : AnyObject {
     @IBInspectable public var imputViewColor : UIColor = UIColor.init(red: 244/255.0, green: 245/255.0, blue: 247/255.0, alpha: 1)
     @IBInspectable public var symbolColor : UIColor = UIColor.init(red: 255/255.0, green: 168/255.0, blue: 18/255.0, alpha: 1)
     @IBInspectable public var underlineColor : UIColor = UIColor.init(red: 123/255.0, green: 207/255.0, blue: 218/255.0, alpha: 1)
-    @IBInspectable public var underlineSize : CGFloat = 2
-    @IBInspectable public var corners : CGFloat = 4
+    @IBInspectable public var underlineSize : CGFloat = 3
+    @IBInspectable public var corners : CGFloat = 9
     @IBInspectable public var font : UIFont = UIFont.boldSystemFont(ofSize: 16)
     @IBInspectable public var symbolSize : CGFloat = 16
     @IBInspectable public var code : String = ""
     
-    weak var delegate : PinCodeViewDelegate?
+    public weak var delegate : PinCodeViewDelegate?
     public var keyboardType: UIKeyboardType = .decimalPad
     
     override public func draw(_ rect: CGRect) {
         self.calculateSizes(rect: rect)
         self.drawViews()
         self.addTarget(self, action: #selector(touchvent), for: .touchDown)
-        
+
     }
 
      @objc fileprivate func touchvent() {
@@ -82,6 +82,7 @@ protocol PinCodeViewDelegate : AnyObject {
             let paragraphStyle = NSMutableParagraphStyle()
             
             let newFont = font.withSize(symbolSize)
+            print(newFont)
             paragraphStyle.alignment = .center
             let attributes: [NSAttributedString.Key : Any] = [
                 .paragraphStyle: paragraphStyle,
@@ -94,6 +95,10 @@ protocol PinCodeViewDelegate : AnyObject {
             attributed.draw(in: symbolRamge)
         }
     }
+    public override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return false
+    }
+    
 }
 
 
@@ -108,10 +113,7 @@ extension PinCodeView : UIKeyInput {
         }
         
         self.code += text
-        
-        if self.code.count == self.numberOfSymbols {
-            self.delegate?.didEndEnterCode(code: text)
-        }
+        self.delegate?.didEndEnterCode(code:self.code)
         self.setNeedsDisplay()
     }
     
