@@ -1,4 +1,4 @@
-# PinCodeView
+# SVPinCodeView
 
 Customizable view to imput pin-code for iOS application. Supported auto-filling from sms
 
@@ -11,11 +11,11 @@ PinCodeView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'PinCodeView'
+pod 'SVPinCodeView'
 ```
 ## How to use:
 
-Just put UIView in your xib or storyboard and change class name on "PinCodeView" 
+Just put UIView in your xib or storyboard and change class name on "SVPinCodeView" 
 
 Use  @IBInspectable properties to change interface:
 

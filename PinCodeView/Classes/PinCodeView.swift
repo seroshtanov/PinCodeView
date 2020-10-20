@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol PinCodeViewDelegate : AnyObject {
+public protocol SVPinCodeViewDelegate : AnyObject {
     func didEnterCode(code: String)
 }
 
@@ -15,7 +15,7 @@ public protocol PinCodeViewDelegate : AnyObject {
 
 @available(iOS 11.0, *)
 
-@IBDesignable public class PinCodeView: UIControl {
+@IBDesignable public class SVPinCodeView: UIControl {
 
     fileprivate var spaceSize : CGFloat = 1
     fileprivate var imputViewSize : CGFloat = 0
@@ -38,7 +38,7 @@ public protocol PinCodeViewDelegate : AnyObject {
     @IBInspectable public var symbolSize : CGFloat = 16
     @IBInspectable public var code : String = ""
     
-    public weak var delegate : PinCodeViewDelegate?
+    public weak var delegate : SVPinCodeViewDelegate?
     public var keyboardType: UIKeyboardType = .numberPad
     public var smartQuotesType: UITextSmartQuotesType = .yes
     override public func draw(_ rect: CGRect) {
@@ -125,7 +125,7 @@ public protocol PinCodeViewDelegate : AnyObject {
 
 
 @available(iOS 11.0, *)
-extension PinCodeView : UITextFieldDelegate {
+extension SVPinCodeView : UITextFieldDelegate {
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var trimming = ""
         if let raw = textField.text {

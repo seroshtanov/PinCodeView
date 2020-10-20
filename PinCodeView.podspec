@@ -7,9 +7,10 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'PinCodeView'
+  s.name             = 'SVPinCodeView'
   s.version          = '1.0.0'
   s.summary          = 'Customizable view to imput pin-code in iOS app'
+  s.swift_version    = '5.0'
   
   s.description      = <<-DESC
     Customizable view to imput pin-code. Supported auto-filling from sms
