@@ -31,7 +31,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		60A35A7E156F16FD59B6A1F2 /* Pods_PinCodeView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinCodeView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D25C014D940C15B073EBCCF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E3E1B3D6A06A7B4E6B5CD2C9 /* PinCodeView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PinCodeView.podspec; path = ../PinCodeView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E3E1B3D6A06A7B4E6B5CD2C9 /* SVPinCodeView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SVPinCodeView.podspec; path = ../SVPinCodeView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				E3E1B3D6A06A7B4E6B5CD2C9 /* PinCodeView.podspec */,
+				E3E1B3D6A06A7B4E6B5CD2C9 /* SVPinCodeView.podspec */,
 				8D25C014D940C15B073EBCCF /* README.md */,
 				535067238B664258D853D7C8 /* LICENSE */,
 			);
