@@ -30,7 +30,7 @@ pinCodeView.corners =  9
 pinCodeView.font = UIFont.boldSystemFont(ofSize: 16)
 pinCodeView.symbolSize  = 16
 pinCodeView.code  = ""
-pinCodeView.deegate = self
+pinCodeView.delegate = self
 ```
 
 Implement PinCodeViewDelegate to detect imput code
