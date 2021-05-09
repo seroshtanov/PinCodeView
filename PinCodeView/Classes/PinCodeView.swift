@@ -61,7 +61,8 @@ public protocol SVPinCodeViewDelegate : AnyObject {
         self.textField.becomeFirstResponder()
     }
 
-    func reset() {
+    public func reset() {
+        self.textField.text = nil
         self.code = ""
         self.setNeedsDisplay()
     }
